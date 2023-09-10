@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="flex justify-center items-center w-screen h-screen bg-white dark:bg-black">
+      <title>こっちを見ないでくださいませご主人様</title>
+      <h1 className="lg:text-8xl md:text-6xl sm:text-5xl text-4xl font-bold m-auto text-center max-w-full font-sans dark:text-white">
+        <button
+          onClick={() => {
+            document.body.requestFullscreen();
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          こっち見んな👁️
+        </button>
+      </h1>
     </div>
   );
 }
